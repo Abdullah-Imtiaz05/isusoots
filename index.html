@@ -1,0 +1,110 @@
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HTML Template</title>
+    <style>
+        /* Optional CSS styles for layout */
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .button {
+            padding: 10px 20px;
+            background-color: #af4c4c;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .screen {
+            display: none;
+            padding: 20px;
+            background-color: rgba(241, 241, 241, 0.99);
+        }
+    </style>
+    <script>
+        var russiaVotes = 0;
+        var ukraineVotes = 0;
+
+        function openScreen(screenId) {
+            // Hide all screens
+            var screens = document.getElementsByClassName('screen');
+            for (var i = 0; i < screens.length; i++) {
+                screens[i].style.display = 'none';
+            }
+
+            // Show the selected screen
+            var screen = document.getElementById(screenId);
+            screen.style.display = 'block';
+        }
+
+        function voteForRussia() {
+            russiaVotes++;
+            alert('Thank you for voting for Russia!');
+        }
+
+        function voteForUkraine() {
+            ukraineVotes++;
+            alert('Thank you for voting for Ukraine!');
+        }
+
+        function showVoteResults() {
+            alert('Russia Votes: ' + russiaVotes + '\nUkraine Votes: ' + ukraineVotes);
+        }
+    </script>
+</head>
+<body>
+<button class="button" onclick="openScreen('screen1')">Russia's Justification</button>
+<button class="button" onclick="openScreen('screen2')">Ukraine Justification</button>
+<button class="button" onclick="openScreen('vote')">Vote</button>
+
+<button class="button" onclick="showVoteResults()">Vote Results</button>
+
+
+<div id="vote" class="screen">
+    <h1>Vote</h1>
+    <p>Please select your choice:</p>
+    <button class="button" onclick="voteForRussia()">Russia</button>
+    <button class="button" onclick="voteForUkraine()">Ukraine</button>
+</div>
+
+<div id="screen1" class="screen">
+    <h1>This is the Reasoning why Russia was justified to Invade Ukraine</h1>
+    <img src="https://image.cnbcfm.com/api/v1/image/107050203-16506291252022-04-21t211147z_262781065_rc2nrt9cza3f_rtrmadp_0_ukraine-crisis-mariupol.jpeg?v=1684474922&w=929&h=523&vtcrop=y"width="300" height="200" class="image" alt="Description of the image">
+    <p>First is the history of Ukraine. Ukraine was part of the USSR and broke off from the USSR in 1991. When Ukraine Broke off they pledged that they will remain neutral. They pledged that they will not take sides and that they will remain as a neutral non-bloc state. </p>
+    <img src="https://www.uccmanitoba.ca/wp-content/uploads/2020/07/69752949_2455543721206832_4136087569433624576_n.jpg"width="300" height="500" class="image" alt="Description of the image">
+    <p>This changed after the EuroMaiden Protests in 2014. After the EuroMaiden protests a new government came in power and they decided to throw away their pledge, and they changed their constitution to allow for Ukraine to join Nato.   </p>
+    <img src="https://cdn-live.foreignaffairs.com/sites/default/files/styles/x_large_1x/public/images/2023/04/24/RTSIBX2L.JPG?itok=fStFxyD8"width="300" height="200" class="image" alt="Description of the image">
+    <p>This threatened Russia because having NATO at Russia's Doorstep would threaten Russia sovereignty as it would allow for troops and weaponry from their enemies to be on their doorstep.    </p>
+    <img src="https://images05.military.com/sites/default/files/styles/full/public/2022-03/1time-embed-ukraine-map-1220x1246.jpg?itok=WBCaxS3k"width="621" height="634" class="image" alt="Description of the image">
+    <p>Ultimately Russia's hand was forced and they had to invade Ukraine to protect Russia's Sovereignty</p>
+
+</div>
+
+<div id="screen2" class="screen">
+    <h1>Why Ukraine is justified in its stance</h1>
+    <p>Ukraine's stance is justified for several reasons:</p>
+    <ul>
+        <li>1. Territorial integrity: Ukraine has the right to protect its territorial integrity and sovereignty.</li>
+        <img src="https://www.aljazeera.com/wp-content/uploads/2022/03/AP22086596048277.jpg?resize=1920%2C1440"width="300" height="200" class="image" alt="Description of the image">
+        <li>2. International law: Russia's actions in annexing Crimea and supporting separatist movements in eastern Ukraine violate international law.</li>
+        <img src="https://cdn-live.foreignaffairs.com/sites/default/files/styles/_webp_large_2x/public/images/2022/03/14/UN7925775_FVBF070322-0186_.jpg.webp?itok=eWFz6ee-"width="300" height="200" class="image" alt="Description of the image">
+        <li>3. Self-determination: The people of Ukraine have the right to determine their own political future without external interference.</li>
+        <img src="https://hips.hearstapps.com/hmg-prod/images/ukraine-1644866337.jpeg"width="300" height="200" class="image" alt="Description of the image">
+
+        <li>4. Support from the international community: Many countries have expressed support for Ukraine and condemned Russia's actions.</li>
+        <img src="https://www.aljazeera.com/wp-content/uploads/2022/02/INTERACTIVE_RUSSIAN_INVASION_COUNTRIES_SENDING_AID-01-01.jpg?w=770&resize=770%2C769"width="300" height="200" class="image" alt="Description of the image">
+
+
+
+    </ul>
+    <p>These reasons contribute to Ukraine's justified stance in defending its sovereignty and seeking a peaceful resolution to the conflict.</p>
+</div>
+
+</body>
+</html>
